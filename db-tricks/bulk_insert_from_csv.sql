@@ -24,7 +24,7 @@ BEGIN
     SET @sql = 
 	'	
 		BULK INSERT TABLE_NAME
-		FROM ''C:\Data\file_' + CONVERT(VARCHAR,@a) +'.csv''
+		FROM '+@filePath + CONVERT(VARCHAR,@a) +'.csv''
 		WITH
 		(
 		FIELDTERMINATOR = N'','',
